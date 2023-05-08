@@ -18,7 +18,6 @@ export default function Cars() {
     useEffect(() => {
         getData();
     }, []);
-    console.log(data)
     return (
         <>
             <ul>

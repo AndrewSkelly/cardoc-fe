@@ -1,14 +1,14 @@
 'use client';
 
 import { auth } from '../page';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 function handleSubmit() {
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const password = (document.getElementById('password') as HTMLInputElement).value;
 
-    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
         // redirect to profile or something similar
         console.log(userCredential);
     }).catch((e) => {
@@ -16,7 +16,7 @@ function handleSubmit() {
     });
 }
 
-export default function Signup() {
+export default function Login() {
     const [user] = useAuthState(auth);
     if (!user) {
         return (
