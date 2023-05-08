@@ -1,6 +1,11 @@
-let apiUrl = 'https://localhost:44382/api/cars';
+'use client';
 
-interface Cars {
+import { useState, useEffect } from "react";
+
+let apiUrl = 'https://localhost:7222/api/cars';
+
+interface Car {
+    Id: string
     Make: string
     Model: string
     EngineSize: number
@@ -8,24 +13,32 @@ interface Cars {
     Score: number
 }
 
-function getData(): Promise<Cars[]> {
-    // For now, consider the data is stored on a static `users.json` file
+function getData() {
     return fetch(apiUrl)
-            // the JSON body is taken from the response
             .then(res => res.json())
             .then(res => {
-                    // The response has an `any` type, so we need to cast
-                    // it to the `User` type, and return it from the promise
-                    return res as Cars[]
-            })
+                return res as Car[];
+            });
 }
 
-export default function cars() {
-    const table = getData();
-    console.log(table)
+export default function Cars() {
+    const [data, setData] = useState<Car[]>();
+    useEffect(() => {
+        getData().then(res => {
+            setData(res);
+            console.log(res);
+        });
+    }, []);
     return (
-        <div>
-            <p></p>
-        </div>
+        <>
+            <ul>
+                {
+                    data?.map((i) => <li key={data.indexOf(i)}>{i.Id}</li>)
+                }
+            </ul>
+            <div>
+                {data?.at(0)?.Make}
+            </div>
+        </>
     );
 }
