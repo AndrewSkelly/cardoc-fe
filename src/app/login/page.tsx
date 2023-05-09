@@ -1,20 +1,8 @@
 'use client';
 
+import { handleLogin } from '@/functions/handleLogin';
 import { auth } from '../page';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
-
-function handleSubmit() {
-    const email = (document.getElementById('email') as HTMLInputElement).value;
-    const password = (document.getElementById('password') as HTMLInputElement).value;
-
-    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-        // redirect to profile or something similar
-        console.log(userCredential);
-    }).catch((e) => {
-        console.log(e);
-    });
-}
 
 export default function Login() {
     const [user] = useAuthState(auth);
@@ -29,7 +17,7 @@ export default function Login() {
                     Password:
                     <input id='password' type="password" />
                 </label>
-                <button onClick={handleSubmit}>Submit</button>
+                <button onClick={handleLogin}>Submit</button>
             </div>
         );
     } else {
