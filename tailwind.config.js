@@ -12,6 +12,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      dropShadow: {
+        'angle': '-5px 5px 5px rgba(0, 30, 80, 0.25)',
+      }
     },
   },
   plugins: [],

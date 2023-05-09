@@ -10,10 +10,10 @@ export default function Navbar() {
     const [user] = useAuthState(auth);
     return (
         <div className="container mx-auto">
-            <nav className='flex justify-between items-center bg-gray-200 px-8 py-2 w-full'>
+            <nav className='flex justify-between items-center bg-slate-100 px-8 py-2 w-full'>
                 <div>
                     <Link href="#">
-                        <Image src={CarDocLogo} alt='logo' width={200}></Image>
+                        <Image src={CarDocLogo} alt='logo' width={200}/ >
                     </Link>
                 </div>
                 <div>
@@ -25,8 +25,8 @@ export default function Navbar() {
                 {
                     user ?
                         <div>
-                            <Link href="#" className="rounded-full m-2 pl-5 pr-5 pt-2 pb-2 text-sm font-bold text-white bg-purple-500">Profile</Link>
-                            <Link href="#" className="rounded-full m-2 pl-5 pr-5 pt-2 pb-2 text-sm font-bold text-white bg-purple-500">Sign Out</Link>
+                            <Link href="#" className="rounded-full m-2 pl-5 pr-5 pt-2 pb-2 text-sm font-bold text-white bg-indigo-400">Profile</Link>
+                            <Link href="#" className="rounded-full m-2 pl-5 pr-5 pt-2 pb-2 text-sm font-bold text-white bg-indigo-400">Sign Out</Link>
                         </div>
                         :
                         <div>
