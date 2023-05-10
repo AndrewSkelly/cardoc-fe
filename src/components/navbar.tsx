@@ -14,8 +14,8 @@ export default function Navbar() {
         <div className="container mx-auto">
             <nav className='flex justify-between items-center bg-slate-100 px-8 py-2 w-full border-indigo-300 border-solid border-b-4'>
                 <div>
-                    <Link href="#">
-                        <Image src={CarDocLogo} alt='logo' width={200}/ >
+                    <Link href="/">
+                        <Image src={CarDocLogo} alt='logo' width={200} />
                     </Link>
                 </div>
                 <div>
