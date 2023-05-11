@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
+// Edit import on release as this uses all components from chartjs and is heavy
+import Chart from 'chart.js/auto';
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -35,7 +37,7 @@ const auth = getAuth(app);
 export default function Home() {
   return (
     <main>
-      <p>home</p>
+      <p>HomePage</p>
     </main>
   )
 }

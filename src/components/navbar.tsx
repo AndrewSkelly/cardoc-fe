@@ -12,7 +12,7 @@ export default function Navbar() {
     const profileLink = `/profile/${user?.displayName}`;
     return (
         <div className="container mx-auto">
-            <nav className='flex justify-between items-center bg-slate-100 px-8 py-2 w-full border-indigo-300 border-solid border-b-4'>
+            <nav className='flex justify-between items-center w-full bg-slate-100 px-8 py-2 border-slate-300 border-solid border-b-4'>
                 <div>
                     <Link href="#">
                         <Image src={CarDocLogo} alt='logo' width={200}/ >
