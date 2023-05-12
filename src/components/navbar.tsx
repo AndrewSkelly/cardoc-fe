@@ -14,8 +14,8 @@ export default function Navbar() {
         <div className="container mx-auto">
             <nav className='flex justify-between items-center w-full bg-slate-100 px-8 py-2 border-slate-300 border-solid border-b-4'>
                 <div>
-                    <Link href="#">
-                        <Image src={CarDocLogo} alt='logo' width={200}/ >
+                    <Link href="/">
+                        <Image src={CarDocLogo} alt='logo' width={200} />
                     </Link>
                 </div>
                 <div>
@@ -25,7 +25,6 @@ export default function Navbar() {
                     <Link href="#" className="p-4 text-lg font-bold text-gray-800">Contact</Link>
                 </div>
                 {
-                    
                     user ?
                         <div>
                             <Link href={profileLink} className="rounded-full m-2 pl-5 pr-5 pt-2 pb-2 text-sm font-bold text-white bg-indigo-400 transition duration-300 ease-out hover:border-indigo-300 border-solid border-4">Profile</Link>
