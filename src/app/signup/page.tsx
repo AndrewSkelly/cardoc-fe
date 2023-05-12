@@ -20,7 +20,7 @@ export default function Signup() {
             <>
                 <div>
                     <Image src={signupbackground} alt='logo' />
-                    <div className="flex justify-between items-center container mx-auto w-6/12 h-96 rounded-xl rounded-ee-3xl p-16 bg-indigo-400 mt-28 filter drop-shadow-angle border-indigo-300 border-solid border-4">
+                    <div className="flex justify-between items-center container mx-auto w-6/12 h-96 rounded-xl rounded-ee-3xl p-16 bg-indigo-400 mt-28 filter drop-shadow-angle border-indigo-300 border-solid border-4 absolute top-1/4 left-1/4">
                         <div className="flex flex-col justify-between">
                             <div className="flex flex-col items-start mb-4">
                                 <label className="text-white mb-2">
