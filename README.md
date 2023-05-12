@@ -9,7 +9,7 @@ Link to backend repo: https://github.com/Arachy/cardoc-be
 + React
 + Typescript
 + Tailwind CSS
-+ Firebase for authentication
++ Firebase for authentication/database
 
 ## Get Started
 Make sure to install dependencies first.
