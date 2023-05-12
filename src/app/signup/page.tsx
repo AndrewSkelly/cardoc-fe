@@ -26,7 +26,7 @@ export default function Signup() {
                                 <label className="text-white mb-2">
                                     <Image src={mail} alt="logo" width={32} height={32} />
                                     <input
-                                        className="bg-gray-200 rounded-md p-2 ml-2"
+                                        className="bg-gray-200 rounded-md p-2 ml-2 text-black"
                                         placeholder="johndoe43"
                                         id="username"
                                         type="text"
@@ -35,7 +35,7 @@ export default function Signup() {
                                 <label className="text-white mb-2">
                                     <Image src={mail} alt="logo" width={32} height={32} />
                                     <input
-                                        className="bg-gray-200 rounded-md p-2 ml-2"
+                                        className="bg-gray-200 rounded-md p-2 ml-2 text-black"
                                         placeholder="example@gmail.com"
                                         id="email"
                                         type="email"
@@ -44,7 +44,7 @@ export default function Signup() {
                                 <label className="text-white mb-2">
                                     <Image src={password} alt="logo" width={32} height={32} />
                                     <input
-                                        className="bg-gray-200 rounded-md p-2 ml-2"
+                                        className="bg-gray-200 rounded-md p-2 ml-2 text-black"
                                         placeholder="pass1234"
                                         id="password"
                                         type="password"
