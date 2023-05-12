@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
+import { getDatabase } from 'firebase/database';
 // Edit import on release as this uses all components from chartjs and is heavy
 import Chart from 'chart.js/auto';
 // import { getAnalytics } from "firebase/analytics";
@@ -26,12 +27,14 @@ const firebaseConfig = {
   storageBucket: "cardoc-2ab2b.appspot.com",
   messagingSenderId: "950402761237",
   appId: "1:950402761237:web:54b116aae1253e1e9b041c",
-  measurementId: "G-0S4J8RWBYE"
+  measurementId: "G-0S4J8RWBYE",
+  databaseURL: "https://cardoc-2ab2b-default-rtdb.europe-west1.firebasedatabase.app"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const database = getDatabase(app);
 // const analytics = getAnalytics(app);
 
 export default function Home() {
@@ -42,4 +45,4 @@ export default function Home() {
   )
 }
 
-export { app, auth };
+export { app, auth, database };
